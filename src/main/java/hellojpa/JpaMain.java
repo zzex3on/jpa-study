@@ -21,31 +21,22 @@ public class JpaMain {
         tx.begin(); // 트랜잭션 시작
 
         try {
-            // 1. insert
-            /*Member member = new Member();
-            member.setId(2L);
-            member.setName("HelloB");*/
+            // 비영속
+            Member member = new Member();
+            member.setId(101L);
+            member.setName("HelloJPA");
 
-            // 2. select
-//            Member findMember = em.find(Member.class, 1L);
-//            System.out.println("findMember = " + findMember.getId());
-//            System.out.println("findMember = " + findMember.getName());
-//            tx.commit();
-//
-//            // 3. delete
-//            em.remove(findMember);
-//
-//            // 4. update
-//            findMember.setName("HelloJPA");
-            // em.persist 하지 않아도 됨, 자바 컬랙션과 비슷한 구조로 동작하기 때문.. 와우
-            // JPA가 데이터의 변경 여부를 트랜잭션을 커밋 시점에서 체크함
-            List<Member> result = em.createQuery("select m from Member as m where name = 'HelloA'", Member.class)
-                    .setFirstResult(0) // 페이징 단위 설정 가능 (첫 시작)
-                    .setMaxResults(10) // 페이징 단위 설정 가능 (마지막)
-                    .getResultList();
-            for (Member member : result) {
-                System.out.println("member.name = " + member.getName());
-            }
+            // 영속
+            System.out.println(":: before ::");
+            em.persist(member);
+            System.out.println(":: after ::");
+
+            Member findMember = em.find(Member.class, 101L);
+
+            System.out.println("findMember.id = " + findMember.getId());
+            System.out.println("findMember.name = " + findMember.getName());
+
+            tx.commit();
         } catch(Exception e) {
             tx.rollback();
         } finally {

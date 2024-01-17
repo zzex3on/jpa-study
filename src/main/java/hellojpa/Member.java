@@ -10,11 +10,18 @@ import javax.persistence.Table;
 // USER 라는 테이블에 동작하도록 표기
 //@Table(name = "USER")
 public class Member {
-
     @Id // PK 지정
     private Long id;
     //@Column(name = "username") // DB의 컬럼명을 명시
     private String name;
+
+    public Member() {
+    }
+
+    public Member(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 
     public Long getId() {
         return id;
