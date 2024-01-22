@@ -7,7 +7,7 @@
 |0. 강좌 소개| ```2024.01.08``` - ```2024.01.09``` |[0. section](https://github.com/zzex3on/jpa-study/tree/main/0.%20section)
 |1. JPA 소개| ```2024.01.09``` - ```2024.01.09``` |[1. section](https://github.com/zzex3on/jpa-study/tree/main/1.%20section)
 |2. JPA 시작하기| ```2024.01.10``` - ```2024.01.14``` |[2. section](https://github.com/zzex3on/jpa-study/tree/main/2.%20section)
-|3. 영속성 관리 - 내부 동작 방식| ```2024.01.15``` - ```ing``` |[3. section](https://github.com/zzex3on/jpa-study/tree/main/3.%20section)
+|3. 영속성 관리 - 내부 동작 방식| ```2024.01.15``` - ```2024.01.22``` |[3. section](https://github.com/zzex3on/jpa-study/tree/main/3.%20section)
 |4. 엔티티 매핑||
 |5. 연관관계 매핑 기초| |
 |6. 다양한 연관관계 매핑| |
