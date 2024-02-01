@@ -14,6 +14,8 @@
     ...
   ```
 - 필드와 컬럼 매핑 : ```@Column```
+  - ```unique``` : 유니크 제약 조건을 걸어줌(DDL 생성 기능, JPA 실행 로직에는 영향을 주지 않음)
+  - ```length``` : 컬럼의 길이를 지정함
 - 기본 키 매핑 : ```@Id```
 - 연관관계 매핑 : ```@ManyToOne```, ```@JoinColumn```
 
@@ -31,8 +33,9 @@
   </persistence-unit>
   ```
   - ```hibernate.hbm2ddl.auto``` 속성
-    - ```create``` : 기존 테이블 삭제 후 다시 생성 (DROP + CREATE)
-    - ```create-drop``` : create와 같으나 애플리케이션 종료 시점에 다시 drop함 (DROP + CREATE + DROP) => 테스트 케이스처럼
-    - ```update``` : 추가/변경된 컬럼이 있을 때 alter 명령어로 변경 처리 (단, 삭제는 불가능)
+    - ```create``` : 기존 테이블 삭제 후 다시 생성 (DROP + CREATE) __운영 장비 사용 X!!__
+    - ```create-drop``` : create와 같으나 애플리케이션 종료 시점에 다시 drop함 (DROP + CREATE + DROP) => 테스트 케이스처럼 __운영 장비 사용 X!!__
+    - ```update``` : 추가/변경된 컬럼이 있을 때 alter 명령어로 변경 처리 (단, 삭제는 불가능) __운영 장비 사용 X!!__
     - ```validate``` : 엔티티와 테이블이 정상 매핑되었는지 확인할 때 사용함 (테이블에 존재하지 않는 엔티티가 발견될 시 오류 발생)
     - ```none``` : 속성을 사용하지 않음 (주석 처리한 것과 동일)
+  - 
