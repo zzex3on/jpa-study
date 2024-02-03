@@ -19,6 +19,7 @@ public class JpaMain {
             em.clear();
 
             Member member2 = em.find(Member.class, 150L);
+            member2.setId(150L);
 
             tx.commit();
         } catch(Exception e) {

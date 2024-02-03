@@ -17,7 +17,7 @@
             <property name="hibernate.use_sql_comments" value="true"/>
             <!--value 값에 표기된 사이즈만큼 쿼리를 모아서 데이터베이스에 한 번에 네트워크를 통해서 쿼리를 보내고 DB를 commit 시킴 (버퍼링 같은 기능, 모았다가 쫙!)-->
             <!--<property name="hiberante.jdbc.batch_size" value="10"/>-->
-            <property name="hibernate.hbm2ddl.auto" value="create-drop" />
+            <property name="hibernate.hbm2ddl.auto" value="create" />
         </properties>
     </persistence-unit>
 </persistence>
